@@ -10,13 +10,10 @@ class Restaurant(models.Model):
 
 
 class Menu(models.Model):
-    DAYS = (('Mo', 'Monday'),
-            ('Tu', 'Tuesday'),
-            ('We', 'Wednesday'),
-            ('Th', 'Thursday'),
-            ('Fr', 'Friday'),
-            ('Sa', 'Saturday'),
-            ('Su', 'Sunday'))
+    DAYS = (('Mo', 'Monday'), ('Tu', 'Tuesday'),
+            ('We', 'Wednesday'), ('Th', 'Thursday'),
+            ('Fr', 'Friday'), ('Sa', 'Saturday'), ('Su', 'Sunday'))
+
     menu_name = models.CharField(max_length=200)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     dishes = models.TextField()
