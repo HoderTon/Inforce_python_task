@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Restaurant, Menu, Vote
 from rest_framework import generics, permissions
 from .serializers import MenuSerializer, VoteSerializer, RestaurantSerializer

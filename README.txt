@@ -1,5 +1,11 @@
 [base address: http://localhost:8000]
 
+# When using JWT authentication, the client side stores the token and attaches it to every request
+
+* Register
+    Endpoint: "/auth/register/" (POST)
+    body: username, password, password2
+
 * Login
     Endpoint: "/auth/login/" (POST)
     body: username, password (as a dict)
@@ -17,22 +23,22 @@
     Payload: name
 
 2. Uploading menu for restaurant (There should be a menu for each day)
-    Endpoint: "api/menus" (POST)
+    Endpoint: "/api/menus" (POST)
     Payload: Menu name, Dishes, Restaurant, Day
 
 3. Getting current day menu
-    Endpoint: "menus/most_voted" (GET)
+    Endpoint: "/menus/most_voted" (GET)
 
 4. Getting results for the current day
-    Endpoint: "menus/today_menus" (GET)
+    Endpoint: "/menus/today_menus" (GET)
 
 5. Employees will vote for the menu
-    Endpoints: "api/menus" (GET)
-               "api/menus/<menu id>/vote" (POST)
+    Endpoints: "/api/menus" (GET)
+               "/api/menus/<menu id>/vote" (POST)
     # each employee can vote only once for one menu
 
 * Checkout particular menu (GET) or delete (DELETE) it
-    Endpoint: "menus/<menu id>" (GET/DELETE)
+    Endpoint: "/menus/<menu id>" (GET/DELETE)
 
 
 
