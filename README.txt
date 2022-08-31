@@ -24,7 +24,7 @@
 
 2. Uploading menu for restaurant (There should be a menu for each day)
     Endpoint: "/api/menus" (POST)
-    Payload: Menu name, Dishes, Restaurant, Day
+    Payload: menu_name, dishes, restaurant, day
 
 3. Getting current day menu
     Endpoint: "/menus/most_voted" (GET)
@@ -39,6 +39,7 @@
 
 * Checkout particular menu (GET) or delete (DELETE) it
     Endpoint: "/menus/<menu id>" (GET/DELETE)
+
 
 
 

@@ -13,7 +13,7 @@ from django.db.models import Count
 class MenuList(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 class MenuRetrieveDestroy(generics.RetrieveDestroyAPIView):
