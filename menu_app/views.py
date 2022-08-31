@@ -14,25 +14,25 @@ from django.db.models import Count
 class MenuList(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class MenuRetrieveDestroy(generics.RetrieveDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class MenuTodayList(generics.ListAPIView):
     today = calendar.day_name[date.today().weekday()][:2]
     queryset = Menu.objects.filter(day=today)
     serializer_class = MenuSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class MostVotedMenu(generics.ListAPIView):
     serializer_class = MenuSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         all_votes = Vote.objects.values('menu').order_by('menu').annotate(the_count=Count('menu'))
