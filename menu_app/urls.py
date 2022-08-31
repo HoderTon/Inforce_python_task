@@ -10,4 +10,5 @@ urlpatterns = [
     path('menus/<int:pk>/vote', views.VoteCreate.as_view()),  # Vote for particular menu (POST)
     path('menus/today_menus', views.MenuTodayList.as_view()),  # Checkout menus for today (GET)
     path('menus/most_voted', views.MostVotedMenu.as_view())  # Get most voted menu (GET) for today
+
 ]
