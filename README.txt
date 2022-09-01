@@ -26,10 +26,10 @@
     Payload: menu_name, dishes, restaurant, day
 
 3. Getting current day menu
-    Endpoint: "/menus/most_voted" (GET)
+    Endpoint: "/api/menus/most_voted" (GET)
 
 4. Getting results for the current day
-    Endpoint: "/menus/today_menus" (GET)
+    Endpoint: "/api/menus/today_menus" (GET)
 
 5. Employees will vote for the menu
     Endpoints: "/api/menus" (GET)
@@ -37,7 +37,7 @@
     # each employee can vote only once for one menu
 
 * Checkout particular menu (GET) or delete (DELETE) it
-    Endpoint: "/menus/<menu id>" (GET/DELETE)
+    Endpoint: "/api/menus/<menu id>" (GET/DELETE)
 
 
 
