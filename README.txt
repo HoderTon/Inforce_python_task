@@ -1,5 +1,6 @@
 
 # When using JWT authentication, the client side stores the token and attaches it to every request
+# Authorization: Bearer <access token>
 
 * Register
     Endpoint: "/auth/register/" (POST)
@@ -25,7 +26,7 @@
     Endpoint: "/api/menus" (POST)
     Payload: 1) menu_name (any text),
              2) dishes (any text),
-             3) restaurant (indicate only from existing),
+             3) restaurant (indicate id of existing restaurant),
              4) day (first 2 characters, as "Mo", 'Tu' et c.)
 
 
