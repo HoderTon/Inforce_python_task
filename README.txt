@@ -3,27 +3,32 @@
 
 * Register
     Endpoint: "/auth/register/" (POST)
-    body: username, password, password2
+    Payload: username, password, password2
 
 * Login
     Endpoint: "/auth/login/" (POST)
-    body: username, password (as a dict)
+    Payload: username, password
 
     # In response you'll get refresh and access tokens which will grand you access to api endpoints
     # Access token expires in 5min, then you'll need to get new one using refresh token "/auth/login/refresh".
 
 * Refresh
     Endpoint: '/auth/login/refresh/' (POST)
-    body: refresh
+    Payload: refresh
     # Refresh token expires in 24 hours. If you won't use it during this time - you'll need to login again.
 
 1. Creating restaurant
     Endpoint: "/api/create_restaurant" (POST)
     Payload: name
 
-2. Uploading menu for restaurant (There should be a menu for each day)
+2. Creating menu for restaurant (There should be a menu for each day)
     Endpoint: "/api/menus" (POST)
-    Payload: menu_name, dishes, restaurant, day
+    Payload: 1) menu_name (any text),
+             2) dishes (any text),
+             3) restaurant (indicate only from existing),
+             4) day (first 2 characters, as "Mo", 'Tu' et c.)
+
+
 
 3. Getting current day menu
     Endpoint: "/api/menus/most_voted" (GET)
