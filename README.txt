@@ -1,4 +1,3 @@
-[base address: http://localhost:8000]
 
 # When using JWT authentication, the client side stores the token and attaches it to every request
 
@@ -11,7 +10,7 @@
     body: username, password (as a dict)
 
     # In response you'll get refresh and access tokens which will grand you access to api endpoints
-    # Access token expires in 5min, then you'll need to get new one using refresh token "/auth/login/".
+    # Access token expires in 5min, then you'll need to get new one using refresh token "/auth/login/refresh".
 
 * Refresh
     Endpoint: '/auth/login/refresh/' (POST)
